@@ -22,7 +22,7 @@ This will generate a `node_modules` folder in your project folder containing all
 Following that, and given you have downloaded and installed `MongoDB`, start it by doing `sudo systemctl start mongod`.
 Once `MongoDB` is initiated, you can start your server by running `node server.js`.
 
-# File Structure
+## File Structure
 
 ```bash
 ├── .env.local | The local configuration file
@@ -85,15 +85,15 @@ Performance stress tests will then run and results will be displayed on console,
 To generate a report of performance results after their run, you can run `npm run report`.
 This will automatically generate an `html` file, visually presenting the results in diagrams and statistics.
 
-# Configuration
+## Configuration
 You can configure a certain number of parameters, such as system port and auth key secret at your `.env` configuration file.
 
-# DB Cleanup
+## DB Cleanup
 The test suite contains setup and teardown logic, leaving the database in a clean state after each run.
 
 However, in case you ended up with a database containing unwanted test entries, you can clean it all up by running `node db-cleanup.js`.
 
-# Continuous Integration
+## Continuous Integration
 In order to setup the application for Continuous Integration tests execution (which are all tests, excluding the ones for performance), we have included some Docker files related to it to the project. However, you need to make a number of steps in order to prepare your project to CI/CD. We used `Gitlab CI` in order to do so, but you are free to choose another technology in case you want to do so:
 
 *Disclaimer: All actions are proposed in order to setup the project and are just suggestions. Since they require applying sudo permissions to processes. Use at your own risk and discretion. It is highly recommended not to do it on any device containing sensitive data.*
